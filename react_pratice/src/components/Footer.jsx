@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import icon from "../assets/print-favicon-free-img-1.png";
 
 const Footer = () => {
     return (
@@ -9,14 +10,16 @@ const Footer = () => {
                         {/* <!-- logo - start --> */}
                         <div class="mb-4 lg:-mt-2">
                             <a href="/" class="inline-flex items-center gap-2 text-xl font-bold text-gray-100 md:text-2xl" aria-label="logo">
-                                <svg width="95" height="94" viewBox="0 0 95 94" class="h-auto w-5 text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                {/* <svg width="95" height="94" viewBox="0 0 95 94" class="h-auto w-5 text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M96 0V47L48 94H0V47L48 0H96Z" />
                                 </svg>
+                                hello */}
+                                <img src={icon} alt="#" />
                             </a>
                         </div>
                         {/* <!-- logo - end --> */}
 
-                        <p class="mb-6 text-gray-400 sm:pr-8">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
+
 
                         {/* <!-- social - start --> */}
                         <div class="flex gap-4">
@@ -143,8 +146,10 @@ const Footer = () => {
                     </div>
                     {/* <!-- nav - end --> */}
                 </div>
-
-                <div class="border-t border-gray-800 py-8 text-center text-sm text-gray-400">© 2021 - Present Flowrift. All rights reserved.</div>
+                <div className='flex justify-between border-t border-gray-800'>
+                    <div className=" py-8 text-center text-sm text-gray-200"> Copyright © 2023 | TryCasuals</div>
+                    <div className='py-8 text-center text-sm text-gray-200'>Powered By TryCasuals</div>
+                </div>
             </footer>
         </div>
     )
