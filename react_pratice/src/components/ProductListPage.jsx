@@ -3,18 +3,29 @@ import React, { useEffect } from 'react'
 import ProductList from './ProductList';
 import { useState } from 'react';
 import { getProductList } from './api';
+import Loading from './Loading';
 
 
 function ProductListPage() {
     const [productList, setproductList] = useState([]);
 
-    useEffect(function () {
-        const list = getProductList();
-        setproductList(list);
-    }, []);
 
     const [query, setQuery] = useState("");
     const [sort, setSort] = useState("default");
+
+
+
+
+    useEffect(function () {
+        const xyz = getProductList();
+        xyz.then(function (response) {
+            // console.log("response", response.data.products);
+
+            setproductList(response.data.products);
+
+        })
+
+    }, []);
 
     let data = productList.filter(function (item) {
         const lowerCaseTitle = item.title.toLowerCase();
@@ -42,6 +53,7 @@ function ProductListPage() {
         setSort(event.target.value);
 
     }
+
 
     return (
         <div>

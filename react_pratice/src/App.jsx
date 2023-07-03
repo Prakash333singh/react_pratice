@@ -13,7 +13,7 @@ function App() {
       <Nav />
       <Routes>
         <Route index element={<ProductListPage />}></Route>
-        <Route path="/products/:sku/" element={<ProductDetails />}></Route>
+        <Route path="/products/:sku" element={<ProductDetails />}></Route>
       </Routes>
     </div>
   );

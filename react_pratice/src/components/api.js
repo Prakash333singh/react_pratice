@@ -1,12 +1,12 @@
 
-import allData from './DummyData'
+import axios from 'axios';
+
 
 export function getProductData(id){
-    console.log("getproductdata");
+    return axios.get("https://dummyjson.com/products/"+id);
 }
 export function getProductList(){
-    console.log("getproductList");
-    return allData;
+    return axios.get("https://dummyjson.com/products");
 }
 
 // export default api
